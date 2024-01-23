@@ -7,10 +7,12 @@ const route = require('./routes/route');
 const PORT = process.env.PORT || 5000;
 
 
+
 // middleware
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(route);
+
 
 
 
