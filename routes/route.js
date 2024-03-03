@@ -44,9 +44,8 @@ router.post('/html/codes/html_form_handler.cfm', (req, res) => {
         </head>
         <body>
           <header class="site-header" id="header">
-            <h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU! ${req.body.name}</h1>
-          </header>
-        
+            <h1 class="site-header__title" data-lead-id="site-header-title">Thank You! ${req.body.name}</h1>
+          </header> 
           <div class="main-content">
             <i class="fa fa-check main-content__checkmark" id="checkmark"></i>
             <p class="main-content__body" data-lead-id="main-content-body">Thanks a bunch for filling that out. It means a lot to us, just like you do! We really appreciate you giving us a moment of your time today. Thanks for being you. We will contact you right away.</p>
