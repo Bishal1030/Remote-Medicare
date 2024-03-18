@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
+const Appointment = require("../public/model")
 
 
 // api routes
@@ -9,8 +10,23 @@ router.get('/', (req, res) => {
     console.log(__dirname);
 });
 
-router.post('/html/codes/html_form_handler.cfm', (req, res) => {
+router.post('/html/codes/html_form_handler.cfm', async(req, res) => {
     console.log(req.body);
+
+     // Extract data from the request body
+     const { carCategory, name, number, email, date } = req.body;
+
+     // Create a new instance of Appointment model
+     const appointment = new Appointment({
+         carCategory,
+         name,
+         number,
+         email,
+         date
+     });
+
+     // Save the appointment to the database
+     await appointment.save();
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
