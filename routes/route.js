@@ -14,11 +14,11 @@ router.post('/html/codes/html_form_handler.cfm', async(req, res) => {
     console.log(req.body);
 
      // Extract data from the request body
-     const { carCategory, name, number, email, date } = req.body;
+     const {Category, name, number, email, date } = req.body;
 
      // Create a new instance of Appointment model
      const appointment = new Appointment({
-         carCategory,
+         Category,
          name,
          number,
          email,

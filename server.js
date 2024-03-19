@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const route = require('./routes/route');
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+
 
 URI = "mongodb+srv://admin:xOSFpM1ApR1WkcrV@cluster0.fbwnubt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
